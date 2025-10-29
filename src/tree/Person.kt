@@ -7,7 +7,6 @@ class PersonNode(val pessoa: Pessoa) {
     var right: PersonNode? = null
 }
 
-// Modifique a assinatura da função para usar PessoaLinkedList
 fun gerarListasPorSexo(
     root: PersonNode?,
     listaHomens: PessoaLinkedList, // Em vez de MutableList<Pessoa>
@@ -17,7 +16,6 @@ fun gerarListasPorSexo(
 
     gerarListasPorSexo(root.left, listaHomens, listaMulheres)
 
-    // A lógica de inserção agora usa nosso método "insereFinal"
     if (root.pessoa.sexo == 'M') {
         listaHomens.insereFinal(root.pessoa)
     } else if (root.pessoa.sexo == 'F') {

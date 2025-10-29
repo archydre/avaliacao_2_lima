@@ -60,7 +60,7 @@ fun menuBST() {
     print("Árvore resultante: ")
     binary.printTree()
 
-    // --- A.2: Encontrar Maior Valor --- [cite: 22]
+    // --- A.2: Encontrar Maior Valor ---
     if (binary.root != null) {
         val maxNode = findMax(binary.root!!)
         println("\n\nA.2: Maior valor na árvore A.1.b: ${maxNode.`val`}")
@@ -68,7 +68,7 @@ fun menuBST() {
         println("\n\nA.2: Árvore A.1.b está vazia.")
     }
 
-    // --- A.3: Listas por Sexo --- [cite: 23, 24]
+    // --- A.3: Listas por Sexo ---
     println("\n\nA.3: Gerando listas por sexo (Árvore de Pessoas)...")
     // Criando uma árvore de teste válida para A.3
     var pRoot: PersonNode? = PersonNode(Pessoa("Carlos", 'M', 30, 75.5f))
@@ -95,7 +95,7 @@ fun menuBST() {
     cRoot = insereRepetido(cRoot, 10) // Repetido 1
     cRoot = insereRepetido(cRoot, 10) // Repetido 2
 
-    // (Acessando diretamente pois não temos uma função de busca para esta árvore)
+    // (Acessando diretamente pois não há uma função de busca para esta árvore)
     var noDez = cRoot
     println("Contagem do nó '10' (esperado 3): ${noDez?.key} -> ${noDez?.count}")
     cRoot = removeRepetido(cRoot, 10)
@@ -103,7 +103,7 @@ fun menuBST() {
     cRoot = removeRepetido(cRoot, 10)
     println("Contagem do nó '10' após 2 remoções (esperado 1): ${noDez?.key} -> ${noDez?.count}")
 
-    // --- A.5: Verificar se é Cheia --- [cite: 26, 27]
+    // --- A.5: Verificar se é Cheia ---
     println("\n\nA.5: Verificando se as árvores são 'cheias'...")
     println("Árvore A.1.b é cheia? (Esperado: false) -> ${ehCheia(binary.root)}")
 
@@ -126,7 +126,7 @@ fun menuBST() {
  */
 fun menuGrafos() {
     println("\n--- PARTE C: GRAFOS ---")
-    println("OBS: O arquivo .txt [cite: 41] deve estar na raiz do projeto.")
+    println("OBS: O arquivo .txt deve estar na raiz do projeto.")
     print("Digite o nome do arquivo (ex: grafo.txt): ")
     val filename = readLine() ?: "grafo.txt"
 
