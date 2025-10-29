@@ -1,3 +1,5 @@
+package tree
+
 data class Pessoa(val nome: String, val sexo: Char, val idade: Int, val peso: Float)
 
 class PersonNode(val pessoa: Pessoa) {

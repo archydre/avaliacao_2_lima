@@ -1,3 +1,4 @@
+import tree.Pessoa
 import kotlin.math.max // Para altura
 
 // Nó da AVL (baseado em Pessoa), agora com 'height'
