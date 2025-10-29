@@ -42,8 +42,18 @@ class BinaryTree(var root: TreeNode?) {
     }
 }
 
-class PersonTree(){
-    val root = PersonNode()
+fun ehCheia(root: TreeNode?): Boolean {
+    if (root == null) {
+        return true
+    }
 
+    if (root.left == null && root.right == null) {
+        return true
+    }
 
+    if (root.left != null && root.right != null) {
+        return ehCheia(root.left) && ehCheia(root.right)
+    }
+
+    return false
 }
