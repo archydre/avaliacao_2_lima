@@ -100,15 +100,27 @@ class Graph {
     /**
      * Listagem do grafo (formato lista de adjacência).
      */
+    /**
+     * Listagem do grafo (formato lista de adjacência) - Versão "do zero"
+     */
     fun listarGrafo() {
         println("\n--- Listagem do Grafo (V=$V, A=$A) ---")
         for (i in 0 until V) {
             print("Vértice $i -> ")
-            val vizinhos = (0 until V).filter { j -> adj[i][j] != 0 }
-            if (vizinhos.isEmpty()) {
+            var temVizinho = false
+
+            // Loop manual em vez de .filter
+            for (j in 0 until V) {
+                if (adj[i][j] != 0) {
+                    print("$j (Peso: ${adj[i][j]}); ")
+                    temVizinho = true
+                }
+            }
+
+            if (!temVizinho) {
                 println("Nenhum")
             } else {
-                println(vizinhos.joinToString { j -> "$j (Peso: ${adj[i][j]})" })
+                println() // Apenas para quebrar a linha
             }
         }
     }

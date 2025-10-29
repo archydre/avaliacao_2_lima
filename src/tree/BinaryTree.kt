@@ -10,11 +10,6 @@ class TreeNode(var `val`: Int) {
     var right: TreeNode? = null
 }
 
-class PersonNode(val name: String? = null, val sex: Char? = null, val age: Int? = null, val weight: Float? = null ) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
-
 // Restringimos T para ser um tipo que pode ser comparado consigo mesmo (Comparable)
 class Node<T : Comparable<T>>(val value: T) {
     var left: Node<T>? = null
